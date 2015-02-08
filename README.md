@@ -1,5 +1,4 @@
 # 1DV449 - Webbteknik II - Projekt
-Webbprojekt 1
 
 ## Inledning
 * Som slutprojekt i kursen 1DV449 Webbteknik II och IDV409 ASP.NET MVC har jag skapat en väderapplikation som hämtar data från Geonames.org och Yr.no. Applikationen fungerar så att man skriver in namnet på en ort, och i samband med detta presenteras en lista för orter som matchar sökningen (hämtas från Geonames.org). Den ort som väljs används för att hämta väderdata från Yr.no, och detta presenteras som en femdygnsprognos. 
