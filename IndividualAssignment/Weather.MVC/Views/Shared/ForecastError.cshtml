@@ -1,0 +1,19 @@
+﻿@model Weather.Domain.Webservices.YrWebservice
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<div class="row">
+    <div class="col-xs12 col-sm-12">
+        <h1 class="text-danger">Beklagar.</h1>
+        <p>Det fanns inga prognoser att visa för vald ort.</p>
+        @if (Model != null && Model.TestYrWebserviceResponse() == false)
+        {
+            <p>
+                Felet beror på att tjänsten varifrån vi hämtar väderdatat - YR.NO - för närvarande inte svarar.
+            </p>
+        }
+        @Html.ActionLink("Tillbaka till sök", "Index")
+    </div>
+</div>

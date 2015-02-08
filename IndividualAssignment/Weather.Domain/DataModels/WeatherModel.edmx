@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WP13_mg222cd_WeatherModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Forecast">
+          <Key>
+            <PropertyRef Name="forecastId" />
+          </Key>
+          <Property Name="forecastId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="geoId" Type="int" Nullable="false" />
+          <Property Name="lastupdate" Type="smalldatetime" Nullable="false" />
+          <Property Name="nextupdate" Type="smalldatetime" Nullable="false" />
+          <Property Name="timeFrom" Type="smalldatetime" Nullable="false" />
+          <Property Name="timeTo" Type="smalldatetime" Nullable="false" />
+          <Property Name="period" Type="int" Nullable="false" />
+          <Property Name="temp" Type="int" Nullable="false" />
+          <Property Name="symbol" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Geoname">
+          <Key>
+            <PropertyRef Name="geoId" />
+          </Key>
+          <Property Name="geoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="geonameId" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="adminName1" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="countryName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="lat" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="lng" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="nextUpdate" Type="smalldatetime" />
+          <Property Name="adminName2" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="lastUpdate" Type="smalldatetime" />
+        </EntityType>
+        <Association Name="FK_Forecast_Geography">
+          <End Role="Geoname" Type="Self.Geoname" Multiplicity="1" />
+          <End Role="Forecast" Type="Self.Forecast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Geoname">
+              <PropertyRef Name="geoId" />
+            </Principal>
+            <Dependent Role="Forecast">
+              <PropertyRef Name="geoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WP13_mg222cd_WeatherModelStoreContainer">
+          <EntitySet Name="Forecast" EntityType="Self.Forecast" Schema="appSchema" store:Type="Tables" />
+          <EntitySet Name="Geoname" EntityType="Self.Geoname" Schema="appSchema" store:Type="Tables" />
+          <AssociationSet Name="FK_Forecast_Geography" Association="Self.FK_Forecast_Geography">
+            <End Role="Geoname" EntitySet="Geoname" />
+            <End Role="Forecast" EntitySet="Forecast" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WP13_mg222cd_WeatherModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Forecast">
+          <Key>
+            <PropertyRef Name="forecastId" />
+          </Key>
+          <Property Name="forecastId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="geoId" Type="Int32" Nullable="false" />
+          <Property Name="lastupdate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="nextupdate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="timeFrom" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="timeTo" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="period" Type="Int32" Nullable="false" />
+          <Property Name="temp" Type="Int32" Nullable="false" />
+          <Property Name="symbol" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Geoname" Relationship="Self.FK_Forecast_Geography" FromRole="Forecast" ToRole="Geoname" />
+        </EntityType>
+        <EntityType Name="Geoname">
+          <Key>
+            <PropertyRef Name="geoId" />
+          </Key>
+          <Property Name="geoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="geonameId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="adminName1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="countryName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lat" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lng" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nextUpdate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Forecasts" Relationship="Self.FK_Forecast_Geography" FromRole="Geoname" ToRole="Forecast" />
+          <Property Name="adminName2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lastUpdate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <Association Name="FK_Forecast_Geography">
+          <End Role="Geoname" Type="Self.Geoname" Multiplicity="1" />
+          <End Role="Forecast" Type="Self.Forecast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Geoname">
+              <PropertyRef Name="geoId" />
+            </Principal>
+            <Dependent Role="Forecast">
+              <PropertyRef Name="geoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WP13_mg222cd_WeatherEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Forecasts" EntityType="Self.Forecast" />
+          <EntitySet Name="Geonames" EntityType="Self.Geoname" />
+          <AssociationSet Name="FK_Forecast_Geography" Association="Self.FK_Forecast_Geography">
+            <End Role="Geoname" EntitySet="Geonames" />
+            <End Role="Forecast" EntitySet="Forecasts" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WP13_mg222cd_WeatherModelStoreContainer" CdmEntityContainer="WP13_mg222cd_WeatherEntities">
+          <EntitySetMapping Name="Forecasts">
+            <EntityTypeMapping TypeName="WP13_mg222cd_WeatherModel.Forecast">
+              <MappingFragment StoreEntitySet="Forecast">
+                <ScalarProperty Name="forecastId" ColumnName="forecastId" />
+                <ScalarProperty Name="geoId" ColumnName="geoId" />
+                <ScalarProperty Name="lastupdate" ColumnName="lastupdate" />
+                <ScalarProperty Name="nextupdate" ColumnName="nextupdate" />
+                <ScalarProperty Name="timeFrom" ColumnName="timeFrom" />
+                <ScalarProperty Name="timeTo" ColumnName="timeTo" />
+                <ScalarProperty Name="period" ColumnName="period" />
+                <ScalarProperty Name="temp" ColumnName="temp" />
+                <ScalarProperty Name="symbol" ColumnName="symbol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Geonames">
+            <EntityTypeMapping TypeName="WP13_mg222cd_WeatherModel.Geoname">
+              <MappingFragment StoreEntitySet="Geoname">
+                <ScalarProperty Name="lastUpdate" ColumnName="lastUpdate" />
+                <ScalarProperty Name="adminName2" ColumnName="adminName2" />
+                <ScalarProperty Name="geoId" ColumnName="geoId" />
+                <ScalarProperty Name="geonameId" ColumnName="geonameId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="adminName1" ColumnName="adminName1" />
+                <ScalarProperty Name="countryName" ColumnName="countryName" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="lng" ColumnName="lng" />
+                <ScalarProperty Name="nextUpdate" ColumnName="nextUpdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,90 @@
+﻿
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Väderapplikation | Offline</title>
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/site.css" rel="stylesheet" />
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/">Väderapplikation</a>
+            </div>
+            <div class="navbar-collapse collapse">
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+
+        <div class="row">
+            <div class="col-xs12 col-sm-12">
+                <h2>
+                    Ingen anslutning!
+                </h2>
+                <p>
+                    Du är för närvarande offline, vilket innebär begränsad funktionalitet för väderapplikationen.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs12 col-sm-12">
+                <div class="input_form">
+                    <form action="/" method="post">
+                        <input name="__RequestVerificationToken" type="hidden" value="KixOnNFyAhDQoSUogVLAjZYC1Gg0sszg5BhP-mlwg4p4SSVNjx_1PW4WXIqAZVL5l4r5A87fEdR-8Rsv-H971YI4IrJqSuK5hL1xAdJn6KE1" />                <div class="form-horizontal">
+
+                            <div class="form-group">
+                                <label class="control-label col-md-1" for="Geoname">Plats:</label>
+                                <div class="col-md-10">
+                                    <input class="form-control text-box single-line" data-val="true" data-val-length="Fältet Plats: måste vara en sträng med maxlängden 100." data-val-length-max="100" data-val-required="Fältet Plats: krävs." id="Geoname" name="Geoname" type="text" value="" disabled />
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="Geoname" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-1 col-md-10">
+                                    <input type="submit" value="Sök" class="btn btn-primary btn-sm" disabled />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <hr />
+        <footer>
+            <p>&copy; 2015 - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="/Scripts/jquery-2.1.3.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/respond.js"></script>
+    <script src="/Scripts/webstorage.js"></script>
+    <script src="/Scripts/jquery.validate.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+
+    <!-- Visual Studio Browser Link -->
+    <script type="application/json" id="__browserLink_initializationData">
+        {"appName":"Chrome","requestId":"e9c747dc2b8a4f659f9b39b69771c359"}
+    </script>
+    <script type="text/javascript" src="http://localhost:50632/3539f59b7cbe434e8c2b02c342a16a70/browserLink" async="async"></script>
+    <!-- End Browser Link -->
+
+</body>
+</html>
