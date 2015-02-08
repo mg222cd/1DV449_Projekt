@@ -12,7 +12,8 @@
 * Applikationen är uppbyggd så att alla sökningar som görs på städer med dess prognoser lagras i databasen. Databasen fungerar som datakälla i de fall flera vädersökningar görs på samma ort inom kort tid (så länge prognosen är giltig) samt även om något av API:ern går ner. Här kontrolleras även de vanligaste felen (t.ex felstavad stad, inga sökträffar, inga väderprognoser, något av API:erna går ner, ingen anslutning m.m.) och dessa hanteras tillsammans med informationsmeddelande på sidan. Mer generella fel (400, 404, 500) hanteras av ramverket med allmänna felsidor.
 
 ## Klientsida 
-* På klientesidan har jag använt mig av HTML5, CSS och JavaScript. Felhantering i samband med de regler som satts upp för inputfältet sker på klientsidan på samma sätt som för servern, men med snyggare felmeddelanden. För detta har jag använt Javascriptramverket jQuery. För responsiv design används CSS-ramverket Bootstrap. 
+* På klientesidan har jag använt mig av HTML5, CSS och JavaScript. Felhantering i samband med de regler som satts upp för inputfältet sker på klientsidan på samma sätt som för servern, men med snyggare felmeddelanden. För detta har jag använt Javascriptramverket jQuery. 
+* För responsiv design används CSS-ramverket Bootstrap. Både söksida och prognossida fungerar på alla skärmtyper.
 * På klientsidan sköts även cachning av sidans nödvändigaste resurser med AppCache.
 
 ## Säkerhet och prestandaoptimering
