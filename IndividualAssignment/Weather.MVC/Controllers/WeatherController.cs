@@ -33,7 +33,6 @@ namespace Weather.MVC.Controllers
 
         // POST: /Weather/
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Index([Bind(Include = "Geoname")] WeatherIndexViewModel model)
         {
             try

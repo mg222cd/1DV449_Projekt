@@ -10,3 +10,15 @@ C:\Users\Marike\Documents\GitHub\Projekt_1dv449_1dv409\IndividualAssignment\Weat
 C:\Users\Marike\Documents\GitHub\Projekt_1dv449_1dv409\IndividualAssignment\Weather.Domain\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Marike\Documents\GitHub\Projekt_1dv449_1dv409\IndividualAssignment\Weather.Domain\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Marike\Documents\GitHub\Projekt_1dv449_1dv409\IndividualAssignment\Weather.Domain\obj\Debug\Weather.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\bin\Debug\Weather.Domain.dll.config
+C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\bin\Debug\Weather.Domain.dll
+C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\bin\Debug\Weather.Domain.pdb
+C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\obj\Debug\Weather.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\obj\Debug\Weather.Domain.dll
+C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\obj\Debug\Weather.Domain.pdb
