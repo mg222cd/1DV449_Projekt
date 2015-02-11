@@ -9,3 +9,4 @@ C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Dom
 C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\bin\Release\Newtonsoft.Json.xml
 C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\obj\Release\Weather.Domain.dll
 C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\obj\Release\Weather.Domain.pdb
+C:\Users\Marike\Documents\GitHub\1DV449_Projekt\IndividualAssignment\Weather.Domain\obj\Release\Weather.Domain.csprojResolveAssemblyReference.cache
