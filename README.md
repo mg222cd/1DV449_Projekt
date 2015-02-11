@@ -41,5 +41,5 @@ Min tanke från början var att jobba mot SMHI:s API, men jag valde tillslut YR 
 
 ## Övrigt
 * Pga. kombinationen med kursen ASP.NET MVC samt ovan nämnda strul med Visual Studio-projektet så har projektet under arbetsts gång flyttat några gånger på Github. För följa historik över gjorda commits, se dessa repositorier:
-[ASP.NET MVC- delen av projektet](https://github.com/1dv409/mg222cd-2-1-individuellt-arbete)
-[Webbteknik II - delen av projektet](https://github.com/mg222cd/Projekt_1dv449_1dv409)
+* [ASP.NET MVC - Väderappplikation](https://github.com/1dv409/mg222cd-2-1-individuellt-arbete)
+* [Webbteknik II - Väderapplikation före flytt](https://github.com/mg222cd/Projekt_1dv449_1dv409)
