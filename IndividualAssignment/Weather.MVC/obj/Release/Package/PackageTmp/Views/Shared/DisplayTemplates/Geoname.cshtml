@@ -1,0 +1,16 @@
+﻿@model Weather.Domain.Geoname
+
+<li>
+    <p>
+        @Model.name.ToString(System.Globalization.CultureInfo.InstalledUICulture),
+        @Model.adminName1.ToString(System.Globalization.CultureInfo.InvariantCulture),
+        @Model.countryName.ToString(System.Globalization.CultureInfo.InvariantCulture)
+        @Html.ActionLink(
+        "Välj",
+        "Forecast",
+        new Weather.Domain.Geoname(
+            @Model.geonameId, @Model.name, @Model.adminName1, @Model.countryName, @Model.lat, @Model.lng, @Model.adminName2
+            )
+        )
+    </p>
+</li>

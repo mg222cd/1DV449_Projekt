@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WP13_mg222cd_WeatherModelStoreContainer" CdmEntityContainer="WP13_mg222cd_WeatherEntities">
+    <EntitySetMapping Name="Forecasts">
+      <EntityTypeMapping TypeName="WP13_mg222cd_WeatherModel.Forecast">
+        <MappingFragment StoreEntitySet="Forecast">
+          <ScalarProperty Name="forecastId" ColumnName="forecastId" />
+          <ScalarProperty Name="geoId" ColumnName="geoId" />
+          <ScalarProperty Name="lastupdate" ColumnName="lastupdate" />
+          <ScalarProperty Name="nextupdate" ColumnName="nextupdate" />
+          <ScalarProperty Name="timeFrom" ColumnName="timeFrom" />
+          <ScalarProperty Name="timeTo" ColumnName="timeTo" />
+          <ScalarProperty Name="period" ColumnName="period" />
+          <ScalarProperty Name="temp" ColumnName="temp" />
+          <ScalarProperty Name="symbol" ColumnName="symbol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Geonames">
+      <EntityTypeMapping TypeName="WP13_mg222cd_WeatherModel.Geoname">
+        <MappingFragment StoreEntitySet="Geoname">
+          <ScalarProperty Name="lastUpdate" ColumnName="lastUpdate" />
+          <ScalarProperty Name="adminName2" ColumnName="adminName2" />
+          <ScalarProperty Name="geoId" ColumnName="geoId" />
+          <ScalarProperty Name="geonameId" ColumnName="geonameId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="adminName1" ColumnName="adminName1" />
+          <ScalarProperty Name="countryName" ColumnName="countryName" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="nextUpdate" ColumnName="nextUpdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

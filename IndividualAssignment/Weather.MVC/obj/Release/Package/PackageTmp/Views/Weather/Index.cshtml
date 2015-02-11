@@ -1,0 +1,79 @@
+﻿@model Weather.Domain.ViewModels.WeatherIndexViewModel
+
+@{
+    ViewBag.Title = "Väderapplikation | Sök prognos via plats";
+}
+<div class="row">
+    <div class="col-xs12 col-sm-12">
+        <h2>
+            Sök på valfri plats för att visa en 5-dygnsprognos.
+        </h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs12 col-sm-12">
+        <div class="input_form">
+            @using (Html.BeginForm())
+            {
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, String.Empty, new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Geoname, htmlAttributes: new { @class = "control-label col-md-1" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Geoname, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Geoname, String.Empty, new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-10">
+                            <input type="submit" value="Sök" class="btn btn-primary btn-sm" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@if (Model != null && Model.TestGeonames() == false)
+{
+    <p>
+        <strong>Beklagar!</strong> Det verkar som om webbservicen <i>Geonames.org</i> för tillfället ligger nere, varför sökning
+        mot Geonames ej kunde genomföras.
+        Sökning har istället skett i vår egen databas, där de populäraste orterna finns lagrade.
+        Om din ort saknas i träfflistan ber vi dig att försöka igen lite senare.
+    </p>
+}
+
+@if (Model != null && Model.HasGeonames)
+{
+    <div class="row">
+        <div class="col-xs12 col-sm-12">
+            <h2>
+                Träffar
+            </h2>
+            <ul>
+                @Html.DisplayFor(m => m.Geonames)
+            </ul>
+        </div>
+    </div>
+}
+
+@if (Model != null && !Model.HasGeonames)
+{
+    <div class="row">
+        <div class="col-xs12 col-sm-12">
+            <h2>
+                Inga träffar
+            </h2>
+            <p>
+                Kontrollera stavningen och försök igen.
+            </p>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
