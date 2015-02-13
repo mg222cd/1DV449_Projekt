@@ -57,6 +57,10 @@ namespace Weather.MVC.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl = "~/")
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Weather");
+            }
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -65,7 +69,7 @@ namespace Weather.MVC.Controllers
         // POST: /Account/Login
         [HttpPost]
         [AllowAnonymous]
-
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl = "~/")
         {
             if (!ModelState.IsValid)
