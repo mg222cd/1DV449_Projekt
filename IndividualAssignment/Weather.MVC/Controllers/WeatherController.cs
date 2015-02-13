@@ -9,6 +9,7 @@ using Weather.Domain.ViewModels;
 
 namespace Weather.MVC.Controllers
 {
+    [OutputCache(Duration = 0)]
     public class WeatherController : Controller
     {
         //Fields and constructors

@@ -13,6 +13,7 @@ using Weather.MVC.Models;
 namespace Weather.MVC.Controllers
 {
     [Authorize]
+    [OutputCache(Duration=0)]
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
