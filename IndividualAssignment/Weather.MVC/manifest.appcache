@@ -4,6 +4,7 @@
 CACHE:
 Content/bootstrap.min.css
 Content/Site.css
+Scripts/webstorage
 Offline.html
 
 NETWORK: 

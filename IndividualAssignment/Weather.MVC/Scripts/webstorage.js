@@ -4,10 +4,10 @@
 function checkConnection() {
     var onlineStatus = navigator.onLine;
     if (onlineStatus == true) {
-        this.storeData();
+        //
     }
     else {
-        //TODO
+        window.location.replace("http://localhost:52297/Offline.html")
     }
 }
 
