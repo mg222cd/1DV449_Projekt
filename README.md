@@ -1,5 +1,8 @@
 # 1DV449 - Webbteknik II - Projekt
 
+## Film
+<a href="https://www.youtube.com/watch?v=dWJdCKwtpas&feature=youtu.be">https://www.youtube.com/watch?v=dWJdCKwtpas&feature=youtu.be</a> Tyvärr väldigt dålig kvalitet på filmen på Youtube. Samma film i bättre kvalitet finns här: <a href="https://github.com/mg222cd/1DV449_Projekt/blob/master/demo_film.swf">https://github.com/mg222cd/1DV449_Projekt/blob/master/demo_film.swf</a>
+
 ## Inledning
 * Som slutprojekt i kursen 1DV449 Webbteknik II och IDV409 ASP.NET MVC har jag skapat en väderapplikation som hämtar data från Geonames.org och Yr.no. Applikationen fungerar så att man skriver in namnet på en ort, och i samband med detta presenteras en lista för orter som matchar sökningen (hämtas från Geonames.org). Den ort som väljs används för att hämta väderdata från Yr.no, och detta presenteras som en femdygnsprognos. 
 * Det finns många liknande applikationer på marknaden, t.ex yr.no, smhi.se, klart.se med flera. Personligen valde jag just den här Mashupen eftersom båda väldokumenterade och fungerande API:er och som kändes lätta att jobba med när man vill ”träna på” att göra mashupapplikationer.
