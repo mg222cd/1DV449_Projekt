@@ -5,7 +5,7 @@
 * Det finns många liknande applikationer på marknaden, t.ex yr.no, smhi.se, klart.se med flera. Personligen valde jag just den här Mashupen eftersom båda väldokumenterade och fungerande API:er och som kändes lätta att jobba med när man vill ”träna på” att göra mashupapplikationer.
 
 ## Schematisk bild
-* Inkludera en schematisk bild över applikationens beståndsdelar så att läsaren har enklare att förstå applikationens dataflöde.
+<img src="https://github.com/mg222cd/1DV449_Projekt/blob/master/Weather_Schema.png" alt="schematisk bild" />
 
 ## Serversida
 * Den största delen av applikationens funktionalitet hanteras av serversidan. Jag har använt mig av ramverket ASP.NET MVC 5, dvs. MVC som arkitektur med C# som programmeringsspråk. Databasen hanteras med Entity Framework och är skapad i MS SQL Server.  Det är även här merparten av all cachning hanteras. 
