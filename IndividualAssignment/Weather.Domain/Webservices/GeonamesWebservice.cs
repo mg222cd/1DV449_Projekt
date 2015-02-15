@@ -68,7 +68,6 @@ namespace Weather.Domain.Webservices
                         rawJsonTest = reader.ReadToEnd();
                     }
                 }
-
                 return true;
             }
             catch (Exception e)
