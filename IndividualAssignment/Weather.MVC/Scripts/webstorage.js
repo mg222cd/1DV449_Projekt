@@ -7,7 +7,7 @@ function checkConnection() {
         //
     }
     else {
-        window.location.replace("http://localhost:52297/Offline.html")
+        window.location.replace("http://localhost:52297/Offline.html");
     }
 }
 
